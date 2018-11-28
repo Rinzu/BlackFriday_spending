@@ -1,4 +1,5 @@
 import pandas as pd 
+from sklearn.linear_model import LogisticRegression
 
 df = pd.read_csv('data/BlackFriday.csv')
 
@@ -6,7 +7,7 @@ df = pd.read_csv('data/BlackFriday.csv')
 # @return: the column after being mapped to a range
 def map_column(col):
 	unique_vals = df[col].unique()
-	df[col] = df[col].replace({unique_vals[i] : i for i in range(unique_vals.shape[0])})
+	return df[col].replace({unique_vals[i] : i for i in range(unique_vals.shape[0])})
 
 
 purchase_total = df.groupby(df.User_ID)['Purchase'].sum()
@@ -14,7 +15,7 @@ df = df.drop_duplicates('User_ID')
 df = df.set_index('User_ID')
 df['Purchase_Total'] = pd.Series(a)
 
-df.drop(['Product_ID',
+df = df.drop(['Product_ID',
 	'Product_Category_1',
 	'Product_Category_2',
 	'Product_Category_3',
