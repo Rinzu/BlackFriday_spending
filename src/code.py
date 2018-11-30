@@ -1,6 +1,7 @@
 import pandas as pd 
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
+# import matplotlib.pyplot as plt
 
 df = pd.read_csv('data/BlackFriday.csv')
 
@@ -21,6 +22,7 @@ df = df.drop(['Product_ID',
 	'Product_Category_2',
 	'Product_Category_3',
 	'Purchase'], axis=1)
+df = df[df.Purchase_Total < 1000000]
 
 #mapping catigorical data to a range
 df['Gender'] = map_column('Gender')
@@ -38,11 +40,13 @@ features = ['Gender',
 X = df.loc[:, features]
 Y = df.Purchase_Total
 
-model = LogisticRegression()
+# model = LogisticRegression()
+model = sklearn.svm.SVC()
 
 x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.20)
 model.fit(x_train, y_train)
 
 y_predict = model.predict(x_test)
+sum(y_predict == y_test)/len(y_test)
 
-model.score(x_test,y_test)
+#model.score(x_test,y_test)
