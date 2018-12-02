@@ -1,28 +1,29 @@
 Correlations:
-age         -0.053325
-job          0.043217
-marital      0.091911
-education   -0.115091
-default     -0.067923
-balance      0.116686
-housing     -0.021103
-loan         0.239074
-contact     -0.315801
-day         -0.111734
-month        0.582960
-duration     0.465632
-campaign    -0.224657
-pdays        0.381959
-previous     0.307316
-poutcome     0.418046
+age         -0.049812
+job          0.036458
+marital     -0.140051
+education    0.097224
+default     -0.068765
+balance      0.119620
+housing     -0.019582
+loan        -0.248050
+contact     -0.351502
+day         -0.053361
+month        0.622669
+duration     0.457942
+campaign    -0.211489
+pdays        0.373526
+previous     0.300136
+poutcome     0.409118
 y            1.000000
+Name: y, dtype: float64
 
  Averaged over 50 runs...
 <> Logistic Regression <>
-Accuracy: 92.4, Percision: 95.12, Recall: 89.44
+Accuracy: 94.2, Percision: 96.62, Recall: 92.29
 <> Decision Tree <>
-Accuracy: 94.48, Percision: 94.49, Recall: 94.56
+Accuracy: 95.66, Percision: 95.78, Recall: 96.04
 <> 5Neighbors <>
-Accuracy: 92.13, Percision: 96.01, Recall: 88.02
+Accuracy: 92.5, Percision: 96.44, Recall: 89.11
 <> SVM <>
-Accuracy: 93.47, Percision: 95.36, Recall: 91.46
+Accuracy: 95.06, Percision: 96.49, Recall: 94.08

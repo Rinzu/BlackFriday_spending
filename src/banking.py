@@ -13,7 +13,7 @@ num_models = 4
 
 df = pd.read_csv('data/bank-full.csv', sep=';')
 df = df.sort_values('y')
-df = df[-10500:]
+df = df[-10000:]
 
 features = [
     'age',
