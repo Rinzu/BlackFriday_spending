@@ -1,0 +1,28 @@
+Correlations:
+age         -0.053325
+job          0.043217
+marital      0.091911
+education   -0.115091
+default     -0.067923
+balance      0.116686
+housing     -0.021103
+loan         0.239074
+contact     -0.315801
+day         -0.111734
+month        0.582960
+duration     0.465632
+campaign    -0.224657
+pdays        0.381959
+previous     0.307316
+poutcome     0.418046
+y            1.000000
+
+ Averaged over 50 runs...
+<> Logistic Regression <>
+Accuracy: 92.4, Percision: 95.12, Recall: 89.44
+<> Decision Tree <>
+Accuracy: 94.48, Percision: 94.49, Recall: 94.56
+<> 5Neighbors <>
+Accuracy: 92.13, Percision: 96.01, Recall: 88.02
+<> SVM <>
+Accuracy: 93.47, Percision: 95.36, Recall: 91.46
